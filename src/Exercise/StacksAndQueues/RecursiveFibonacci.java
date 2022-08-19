@@ -1,6 +1,5 @@
 package Exercise.StacksAndQueues;
 
-import java.util.ArrayDeque;
 import java.util.Scanner;
 
 public class RecursiveFibonacci {
