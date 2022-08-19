@@ -1,6 +1,7 @@
 package Exercise.StacksAndQueues;
 
 import java.util.ArrayDeque;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class BasicStackOperations {
@@ -26,7 +27,7 @@ public class BasicStackOperations {
         } else if (numbersStack.isEmpty()) {
             System.out.println("0");
         } else {
-            System.out.println(numbersStack.stream().min(Integer::compareTo).get());
+            System.out.println(Collections.min(numbersStack));
         }
     }
 }
