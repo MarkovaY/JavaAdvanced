@@ -32,7 +32,7 @@ public class BalancedParentheses {
                 }
             }
         }
-        if (isBalanced) {
+        if (isBalanced && firstPart.isEmpty()) {
             System.out.println("YES");
         } else {
             System.out.println("NO");
