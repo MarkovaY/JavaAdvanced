@@ -17,6 +17,10 @@ public class FillTheMatrixTwo {
         } else {
             fillMatrixB(dimensions, matrix);
         }
+        printMatrix(matrix);
+    }
+
+    private static void printMatrix(int[][] matrix) {
         for (int[] arr : matrix) {
             for (int number : arr) {
                 System.out.print(number + " ");
