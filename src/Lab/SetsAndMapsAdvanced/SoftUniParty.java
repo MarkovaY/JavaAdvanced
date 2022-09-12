@@ -26,16 +26,14 @@ public class SoftUniParty {
 
         while (!input.equals("END")) {
 
-            if (Character.isDigit(input.charAt(0))) {
-                vipList.remove(input);
-            } else {
-                regularList.remove(input);
-            }
+            vipList.remove(input);
+            regularList.remove(input);
 
             input = scanner.nextLine();
         }
 
         int guestsMissed = vipList.size() + regularList.size();
+
         System.out.println(guestsMissed);
         vipList.forEach(System.out::println);
         regularList.forEach(System.out::println);
