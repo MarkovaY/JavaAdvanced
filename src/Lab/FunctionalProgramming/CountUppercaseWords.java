@@ -17,7 +17,7 @@ public class CountUppercaseWords {
         // Creating a predicate to filter the upper case words
         Predicate<String> upperCasePredicate = word -> Character.isUpperCase(word.charAt(0));
 
-        List<String> upperCaseWords = Arrays.stream(scanner.nextLine().split(" ")).filter(upperCasePredicate).collect(Collectors.toList());
+        List<String> upperCaseWords = Arrays.stream(scanner.nextLine().split("//s+")).filter(upperCasePredicate).toList();
 
         // Print upper case words count
         System.out.println(upperCaseWords.size());
