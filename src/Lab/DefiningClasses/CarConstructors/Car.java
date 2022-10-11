@@ -5,12 +5,14 @@ public class Car {
     private String model;
     private int horsePower;
 
+    // Creating first constructor
     public Car(String brand, String model, int horsePower) {
         this.brand = brand;
         this.model = model;
         this.horsePower = horsePower;
     }
 
+    // Crating second constructor
     public Car(String brand) {
         this(brand, "unknown", -1);
     }
@@ -43,6 +45,7 @@ public class Car {
         this.horsePower = horsePower;
     }
 
+    // Overriding toString method to print in the expected format
     @Override
     public String toString() {
         return String.format("The car is: %s %s - %d HP.", getBrand(), getModel(), getHorsePower());
