@@ -42,6 +42,7 @@ public class MaximalSum {
 
                 if (sum > maxSum) {
                     maxSum = sum;
+                    // Keeping the starting point of the eventual best 3 X 3 matrix
                     bestStartingRow = row;
                     bestStartingCol = col;
                 }
