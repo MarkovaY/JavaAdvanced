@@ -50,7 +50,7 @@ public class StringMatrixRotation {
             case 0:
                 for (int row = 0; row < rows; row++) {
                     for (int col = 0; col < cols; col++) {
-                        System.out.print(matrix[row][col] + " ");
+                        System.out.print(matrix[row][col]);
                     }
                     System.out.println();
                 }
@@ -58,7 +58,7 @@ public class StringMatrixRotation {
             case 90:
                 for (int col = 0; col < cols; col++) {
                     for (int row = rows - 1; row >= 0; row--) {
-                        System.out.print(matrix[row][col] + " ");
+                        System.out.print(matrix[row][col]);
                     }
                     System.out.println();
                 }
@@ -66,7 +66,7 @@ public class StringMatrixRotation {
             case 180:
                 for (int row = rows - 1; row >= 0; row--) {
                     for (int col = cols - 1; col >= 0; col--) {
-                        System.out.print(matrix[row][col] + " ");
+                        System.out.print(matrix[row][col]);
                     }
                     System.out.println();
                 }
@@ -74,7 +74,7 @@ public class StringMatrixRotation {
             case 270:
                 for (int col = cols - 1; col >= 0; col--) {
                     for (int row = 0; row < rows; row++) {
-                        System.out.print(matrix[row][col] + " ");
+                        System.out.print(matrix[row][col]);
                     }
                     System.out.println();
                 }
