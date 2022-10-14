@@ -26,6 +26,7 @@ public class Phonebook {
             input = scanner.nextLine();
         }
 
+        input = scanner.nextLine();
         // Searching the phonebook for the names and numbers required
         while (!input.equals("stop")) {
 
@@ -33,9 +34,7 @@ public class Phonebook {
             if (phonebook.containsKey(input)) {
                 System.out.println(input + " -> " + phonebook.get(input));
             } else {
-                if (!input.equals("search")) {
-                    System.out.printf("Contact %s does not exist.%n", input);
-                }
+                System.out.printf("Contact %s does not exist.%n", input);
             }
 
             input = scanner.nextLine();
