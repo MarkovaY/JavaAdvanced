@@ -8,14 +8,17 @@ public class HandsOfCards {
 
         String input = scanner.nextLine();
 
+        // Creating a map of the players and their cards
         Map<String, HashSet<String>> players = new LinkedHashMap<>();
         while (!input.equals("JOKER")) {
 
             String name = input.split(": ")[0];
             String[] cardsDrawn = input.split(": ")[1].split(", ");
 
+            // Using a set to filter the cards, no repeating cards are allowed
             HashSet<String> cardsSet = new HashSet<>(Arrays.asList(cardsDrawn));
 
+            // Filling the map with the players and their cards
             if (!players.containsKey(name)) {
                 players.put(name, cardsSet);
             } else {
@@ -27,6 +30,7 @@ public class HandsOfCards {
             input = scanner.nextLine();
         }
 
+        // Printing the results
         for (var player : players.entrySet()) {
             String name = player.getKey();
             int points = calculatePoints(player.getValue());
@@ -34,6 +38,7 @@ public class HandsOfCards {
         }
     }
 
+    // A method that calculates the points a player gets from their cards
     private static int calculatePoints(HashSet<String> cards) {
         int points = 0;
         for (String card : cards) {
@@ -45,6 +50,7 @@ public class HandsOfCards {
         return points;
     }
 
+    // A method which returns the color
     private static int getColor(String color) {
         switch (color) {
             case "S":
@@ -59,6 +65,7 @@ public class HandsOfCards {
         return 0;
     }
 
+    // A method which returns the power
     private static int getPower(String power) {
         switch (power) {
             case "2":
