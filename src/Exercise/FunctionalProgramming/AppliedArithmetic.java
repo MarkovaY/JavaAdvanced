@@ -11,14 +11,19 @@ public class AppliedArithmetic {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // Reading the input
         List<Integer> numbersList = Arrays.stream(scanner.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
 
+        // Reading the commands
         String command = scanner.nextLine();
 
+        // Creating functions for each command we could receive
         UnaryOperator<List<Integer>> add = numbers -> numbers.stream().map(number -> number + 1).collect(Collectors.toList());
         UnaryOperator<List<Integer>> multiply = numbers -> numbers.stream().map(number -> number * 2).collect(Collectors.toList());
         UnaryOperator<List<Integer>> subtract = numbers -> numbers.stream().map(number -> number - 1).collect(Collectors.toList());
         Consumer<List<Integer>> print = numbers -> numbers.forEach(number -> System.out.print(number + " "));
+
+        // Applying the commands until we receive the command "end"
         while (!command.equals("end")) {
 
             switch (command) {
