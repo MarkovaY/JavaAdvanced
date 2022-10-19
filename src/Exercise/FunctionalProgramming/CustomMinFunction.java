@@ -1,9 +1,11 @@
 package Exercise.FunctionalProgramming;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.OptionalInt;
 import java.util.Scanner;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class CustomMinFunction {
     public static void main(String[] args) {
@@ -22,6 +24,9 @@ public class CustomMinFunction {
             }
             return min;
         };
+
+        // Another option
+        // Function<int[], Integer> minInt = elements -> Collections.min(Arrays.stream(elements).boxed().collect(Collectors.toList()));
 
         // Another option, but possible exception
         // Function<int[], Integer> minIntFunction = numbersArr -> Arrays.stream(numbersArr).min().getAsInt();
