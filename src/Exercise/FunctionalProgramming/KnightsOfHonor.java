@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
-public class KnightsOdHonor {
+public class KnightsOfHonor {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
