@@ -27,6 +27,6 @@ public class Main {
             }
         }
         //Sorting people in ascending order and printing the results
-        people.stream().sorted((left, right) -> left.getName().compareTo(right.getName())).forEach(person -> System.out.println(person.getName() + " - " + person.getAge()));
+        people.stream().sorted((left, right) -> left.getName().compareTo(right.getName())).forEach(System.out::println);
     }
 }
