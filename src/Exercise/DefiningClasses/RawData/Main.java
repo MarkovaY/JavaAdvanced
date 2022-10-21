@@ -27,10 +27,7 @@ public class Main {
             Tyre tyre = null;
 
             for (int j = 5; j <= 12; j += 2) {
-                double tyrePressure = Double.parseDouble(carInfo[j]);
-                int tyreAge = Integer.parseInt(carInfo[j + 1]);
-                tyre = new Tyre(tyrePressure, tyreAge);
-                tyres.add(tyre);
+                addingTyreInformation(tyres, carInfo, j);
             }
 
             Car car = new Car(engine, cargo, tyres);
@@ -50,6 +47,10 @@ public class Main {
         }
 
         String command = scanner.nextLine();
+        printingFragileOrFlamableCars(fragileCars, flamableCars, command);
+    }
+
+    private static void printingFragileOrFlamableCars(Map<String, Car> fragileCars, Map<String, Car> flamableCars, String command) {
         switch (command) {
             case "fragile":
                 fragileCars.keySet().forEach(System.out::println);
@@ -58,5 +59,13 @@ public class Main {
                 flamableCars.keySet().forEach(System.out::println);
                 break;
         }
+    }
+
+    private static void addingTyreInformation(List<Tyre> tyres, String[] carInfo, int j) {
+        Tyre tyre;
+        double tyrePressure = Double.parseDouble(carInfo[j]);
+        int tyreAge = Integer.parseInt(carInfo[j + 1]);
+        tyre = new Tyre(tyrePressure, tyreAge);
+        tyres.add(tyre);
     }
 }
