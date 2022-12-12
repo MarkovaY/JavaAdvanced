@@ -4,19 +4,19 @@ public class Main {
     public static void main(String[] args) {
         //Initialize the repository
         Bakery bakery = new Bakery("Barny", 10);
-//Initialize entity
+        //Initialize entity
         Employee employee = new Employee("Stephen", 40, "Bulgaria");
-//Print Employee
+        //Print Employee
         System.out.println(employee); //Employee: Stephen, 40 (Bulgaria)
 
-//Add Employee
+        //Add Employee
         bakery.add(employee);
-//Remove Employee
+        //Remove Employee
         System.out.println(bakery.remove("Employee name")); //false
 
         Employee secondEmployee = new Employee("Mark", 34, "UK");
 
-//Add Employee
+        //Add Employee
         bakery.add(secondEmployee);
 
         Employee oldestEmployee = bakery.getOldestEmployee(); // Employee with name Stephen
@@ -27,9 +27,9 @@ public class Main {
         System.out.println(bakery.getCount()); //2
 
         System.out.println(bakery.report());
-//Employees working at Bakery Barny:
-//Employee: Stephen, 40 (Bulgaria)
-//Employee: Mark, 34 (UK)
+        //Employees working at Bakery Barny:
+        //Employee: Stephen, 40 (Bulgaria)
+        //Employee: Mark, 34 (UK)
 
 
     }
