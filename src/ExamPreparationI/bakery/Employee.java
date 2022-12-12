@@ -1,4 +1,4 @@
-package ExamPreparationI.Openning.src.bakery;
+package ExamPreparationI.bakery;
 
 public class Employee {
     private String name;
