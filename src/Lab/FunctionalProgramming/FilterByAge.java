@@ -34,12 +34,14 @@ public class FilterByAge {
             filterPredicate = (age, ageLimit) -> age >= ageComparison;
         }
         // Create filter according to printType
-        Consumer<Map.Entry<String, Integer>> printConsumer = switch (printType) {
-            case "name age" -> name -> System.out.println(name.getKey() + " - " + name.getValue());
-            case "name" -> name -> System.out.println(name.getKey());
-            case "age" -> name -> System.out.println(name.getValue());
-            default -> null;
-        };
+        Consumer<Map.Entry<String, Integer>> printConsumer = null;
+        if (printType.equals("name age")) {
+            printConsumer = name -> System.out.println(name.getKey() + " - " + name.getValue());
+        } else if (printType.equals("name")) {
+            printConsumer = name -> System.out.println(name.getKey());
+        } else if (printType.equals("age")) {
+            printConsumer = name -> System.out.println(name.getValue());
+        }
 
         if (printConsumer != null) {
             BiPredicate<Integer, Integer> finalFilterPredicate = filterPredicate;
