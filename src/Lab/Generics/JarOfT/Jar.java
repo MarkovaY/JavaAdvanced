@@ -3,13 +3,11 @@ package Lab.Generics.JarOfT;
 import java.util.ArrayDeque;
 
 public class Jar<T> {
-//    Create a class Jar<> that can store anything.
-//    It should have two public methods:
-//            •	void add(element)
-//            •	element remove()
-//    Adding should add on top of its contents. Remove should get the topmost element.
-
-
+        //    Create a class Jar<> that can store anything.
+        //    It should have two public methods:
+        //            •	void add(element)
+        //            •	element remove()
+        //    Adding should add on top of its contents. Remove should get the topmost element.
 
     private ArrayDeque<T> stack;
 
