@@ -33,10 +33,10 @@ public class SmartArray {
     }
 
     // int remove(int index) - Removes the element at the given index
-    public int remove (int index) {
-
-
-    }
+//    public int remove (int index) {
+//
+//
+//    }
 
     private void checkIndex(int index) {
 
