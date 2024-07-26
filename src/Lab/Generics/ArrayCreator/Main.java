@@ -9,7 +9,7 @@ public class Main {
             System.out.print(s + " ");
         }
 
-        Integer[] arr1 = ArrayCreator.<Integer>create(Integer.class, 3, 72);
+        Integer[] arr1 = ArrayCreator.<Integer>create(Integer.class, 3, 77);
 
         for (int i : arr1) {
             System.out.print(i + " ");
