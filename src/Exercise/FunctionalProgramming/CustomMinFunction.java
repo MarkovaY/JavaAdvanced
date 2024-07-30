@@ -25,6 +25,7 @@ public class CustomMinFunction {
             return min;
         };
 
+
         // Another option
         // Function<int[], Integer> minInt = elements -> Collections.min(Arrays.stream(elements).boxed().collect(Collectors.toList()));
 
