@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 public class FindTheSmallestElement {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         // Reading the input
         List<Integer> numbers = Arrays.stream(scanner.nextLine().split("\\s+"))
                 .map(Integer::parseInt)
