@@ -19,6 +19,7 @@ public class ConsumerPrint {
         // Printing the names
         input.forEach(consumer);
 
+
 //        for (String name : input) {
 //            consumer.accept(name);
 //        }
