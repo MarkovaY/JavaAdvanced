@@ -7,15 +7,14 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        List<Integer> list = new ArrayList<>();
+        List<Integer> listOfNumbers = new ArrayList<>();
 
-        Collections.addAll(list, 42, 77, 32, 854, 12);
+        Collections.addAll(listOfNumbers, 42, 77, 32, 854, 12);
 
-        Integer maxInt = ListUtil.getMax(list);
-
-        Integer minInt = ListUtil.getMin(list);
+        Integer maxInt = ListUtil.getMax(listOfNumbers);
+        Integer minInt = ListUtil.getMin(listOfNumbers);
 
         System.out.println("Highest number: " + maxInt);
-        System.out.println("Lowest number:" + minInt);
+        System.out.println("Lowest number: " + minInt);
     }
 }
