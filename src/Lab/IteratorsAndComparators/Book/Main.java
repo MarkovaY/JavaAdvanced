@@ -15,5 +15,8 @@ public class Main {
         books.add(bookTwo);
         books.add(bookThree);
 
+        for (Book book : books) {
+            System.out.println(book.getTitle());
+        }
     }
 }
