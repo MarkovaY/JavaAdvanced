@@ -33,6 +33,7 @@ public class FilterByAge {
         } else if (comparison.equals("older")) {
             filterPredicate = (age, ageLimit) -> age >= ageComparison;
         }
+
         // Create filter according to printType
         Consumer<Map.Entry<String, Integer>> printConsumer = null;
         if (printType.equals("name age")) {
