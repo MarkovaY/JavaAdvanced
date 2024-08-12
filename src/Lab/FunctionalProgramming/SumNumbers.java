@@ -18,8 +18,10 @@ public class SumNumbers {
 
         // Finding the sum of all the integers from the input
         int sum = Arrays.stream(numbersInput).mapToInt(Integer::parseInt).sum();
+
         // Printing the count of the elements
         System.out.println("Count = " + numbers.size());
+
         // Printing the sum of the elements
         System.out.print("Sum = " + sum);
     }
