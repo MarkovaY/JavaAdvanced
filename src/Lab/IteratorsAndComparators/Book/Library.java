@@ -9,7 +9,7 @@ public class Library implements Iterable<Book> {
     //      -	books: Book[]
     //      +	iterator(): Iterator<Book>
     //    Create a nested class LibIterator from the UML diagram below:
-    //            <<Iterator<Book>>> LibIterator
+    //    <<Iterator<Book>>> LibIterator
     //      -	counter: int
     //      +	hasNext(): boolean
     //      +	next(): Book
