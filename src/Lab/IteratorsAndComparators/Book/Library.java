@@ -13,7 +13,6 @@ public class Library implements Iterable<Book> {
     //      -	counter: int
     //      +	hasNext(): boolean
     //      +	next(): Book
-
     private class LibIterator implements Iterator<Book> {
 
         int index = 0;
