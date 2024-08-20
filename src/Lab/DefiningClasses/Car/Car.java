@@ -2,6 +2,13 @@ package Lab.DefiningClasses.Car;
 
 
 public class Car {
+
+//    Create a class named Car.
+//    The class should have public fields for:
+//            •	Brand: String
+//            •	Model: String
+//            •	Horsepower: int
+
     public String brand;
     public String model;
     public int horsePower;
