@@ -1,4 +1,4 @@
-package Lab.IteratorsAndComparators.Book;
+package Lab.IteratorsAndComparators;
 
 public class Main {
     public static void main(String[] args) {
