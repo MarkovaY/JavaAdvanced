@@ -3,7 +3,7 @@ package Lab.IteratorsAndComparators;
 import java.util.Arrays;
 import java.util.List;
 
-public class Book {
+public class Book implements Comparable<Book>{
 
     //    Create a class Book from the UML diagram below:
     //    Book
@@ -50,5 +50,21 @@ public class Book {
 
     public List<String> getAuthors() {
         return authors;
+    }
+
+
+//    Expand Book by implementing Comparable<Book>.
+//    The book has to be compared by title. When the title is equal, compare them by year.
+
+    @Override
+    public int compareTo(Book other) {
+
+        int result = this.getTitle().compareTo(other.getTitle());
+
+        if(result == 0){
+            result = Integer.compare(this.getYear(), other.getYear());
+        }
+
+        return result;
     }
 }
