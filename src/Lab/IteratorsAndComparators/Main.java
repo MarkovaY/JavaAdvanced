@@ -1,5 +1,8 @@
 package Lab.IteratorsAndComparators;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -12,5 +15,18 @@ public class Main {
         for (Book book: library) {
             System.out.println(book.getTitle());
         }
+
+        List<Book> books = new ArrayList<>();
+
+        books.add(bookOne);
+        books.add(bookTwo);
+        books.add(bookThree);
+
+        books.sort(new BookComparator());
+
+        for (Book book : library) {
+            System.out.println(book.getTitle() + " " + book.getYear());
+        }
+
     }
 }
