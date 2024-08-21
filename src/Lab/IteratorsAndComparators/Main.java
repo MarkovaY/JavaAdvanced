@@ -28,5 +28,14 @@ public class Main {
             System.out.println(book.getTitle() + " " + book.getYear());
         }
 
+        if (bookOne.compareTo(bookTwo) > 0) {
+            System.out.printf("%s is before %s%n", bookOne.getTitle(), bookTwo.getTitle());
+        } else if (bookOne.compareTo(bookTwo) < 0) {
+            System.out.printf("%s is before %s%n", bookTwo.getTitle(), bookOne.getTitle());
+        } else {
+            System.out.println("Book are equal");
+        }
+
+
     }
 }
