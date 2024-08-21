@@ -1,6 +1,8 @@
 package Lab.IteratorsAndComparators;
 
-public class BookComparator {
+import java.util.Comparator;
+
+public class BookComparator implements Comparator<Book> {
 
 //    Create a class BookComparator from the UML diagram below:
 //         <<Comparator<Book>>> BookComparator
@@ -9,5 +11,15 @@ public class BookComparator {
 //            1.	Book title.
 //            2.	Year of publishing a book.
 
+    @Override
+    public int compare(Book f, Book s) {
 
+        int result = f.getTitle().compareTo(s.getTitle());
+
+        if(result == 0){
+            result = Integer.compare(f.getYear(), s.getYear());
+        }
+
+        return result;
+    }
 }
